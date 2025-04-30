@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask import send_from_directory
 from flask_cors import CORS
 import re
 from fastapi import FastAPI, HTTPException
@@ -189,6 +190,10 @@ def smart_response(message, latitud, longitud):
         "message": "⚡ I’m an EV assistant, I'd love to help you with electric vehicles in Ireland.",
         "voice": "I’m an EV assistant, I'd love to help you with electric vehicles in Ireland."
     }
+
+@app.route("/")
+def serve_frontend():
+    return send_from_directory("../frontend", "index.html")
 
 @app.route("/chat", methods=["POST"])
 def chat():
