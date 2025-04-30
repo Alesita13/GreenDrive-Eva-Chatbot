@@ -193,7 +193,8 @@ def smart_response(message, latitud, longitud):
 
 @app.route("/")
 def serve_frontend():
-    return send_from_directory("../frontend", "index.html")
+    frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../frontend"))
+    return send_from_directory(frontend_dir, "index.html")
 
 @app.route("/chat", methods=["POST"])
 def chat():
