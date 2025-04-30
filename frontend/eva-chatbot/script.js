@@ -51,7 +51,7 @@ async function sendToBot(message) {
   const jsonResponse = JSON.stringify({ "message": message, "latitud": coords.lat, "longitud": coords.lng });
 
   try {
-    const res = await fetch("http://0.0.0.0:10000/chat", {
+    const res = await fetch("https://greendrive-eva-chatbot.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: jsonResponse,
