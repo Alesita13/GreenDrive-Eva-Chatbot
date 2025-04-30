@@ -196,6 +196,11 @@ def serve_frontend():
     frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../frontend"))
     return send_from_directory(frontend_dir, "index.html")
 
+@app.route("/<path:filename>")
+def serve_static(filename):
+    frontend_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "../frontend"))
+    return send_from_directory(frontend_dir, filename)
+
 @app.route("/chat", methods=["POST"])
 def chat():
     try:
