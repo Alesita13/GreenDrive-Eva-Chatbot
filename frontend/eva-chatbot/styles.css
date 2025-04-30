@@ -1,0 +1,329 @@
+/* styles.css */
+:root {
+  --primary-green: #3D8D7A;
+  --secondary-green: #B3D8A8;
+  --light-green: #FBFFE4;
+  --soft-green: #A3D1C6;
+  --white: #ffffff;
+  --dark-text: #333333;
+  --accent-blue: #54BAB9;
+  --accent-dark-blue: #3C4048;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--light-green);
+  margin: 0;
+  color: var(--dark-text);
+}
+
+.header {
+  background-color: var(--primary-green);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.header img {
+  width: 64px;
+  margin-right: 15px;
+}
+
+.title-container {
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.header p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--secondary-green);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.button-group button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(to right, var(--primary-green), var(--accent-blue));
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.button-group button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+#chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+}
+
+#chat-box {
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.message {
+  max-width: 75%;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  white-space: pre-wrap;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: var(--accent-blue);
+  color: var(--white);
+}
+
+.eva {
+  align-self: flex-start;
+  background-color: var(--secondary-green);
+  color: var(--dark-text);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+}
+
+button#send-btn, button#voice-btn {
+  background-color: var(--primary-green);
+  color: var(--white);
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button#send-btn:hover, button#voice-btn:hover {
+  background-color: var(--accent-blue);
+}
+
+#typing-indicator {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--dark-text);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* FAQ Section */
+#faq-container {
+  max-width: 800px;
+  margin: 1rem auto;
+  display: none;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  background-color: var(--soft-green);
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  background-color: var(--secondary-green);
+}
+
+.faq-item summary {
+  font-weight: bold;
+  color: var(--accent-dark-blue);
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item p {
+  margin: 0.5rem 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+.faq-item[open] summary {
+  color: var(--primary-green);
+}
+.eva-chat-header {
+  background: linear-gradient(to right, #169b62, #48c2a7);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  gap: 1rem;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: var(--box-shadow);
+}
+
+.eva-chat-header .logo {
+  width: 50px;
+  height: 50px;
+  background-color: var(--white);
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.eva-chat-title .title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.eva-chat-title .subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #e6f5ef;
+}
+#toggle-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle at center, #54BAB9 0%, #3D8D7A 100%);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#toggle-chatbot:hover {
+  transform: scale(1.1);
+}
+
+#toggle-chatbot img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+/* Ocultar scrollbars en WebKit browsers (Chrome, Edge, Safari) */
+#chat-container::-webkit-scrollbar,
+#chat-box::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+#chat-container::-webkit-scrollbar-thumb,
+#chat-box::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+#chat-container::-webkit-scrollbar-track,
+#chat-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Ocultar por defecto y mostrar solo al hacer hover si quieres */
+#chat-container:hover::-webkit-scrollbar,
+#chat-box:hover::-webkit-scrollbar {
+  background: rgba(0,0,0,0.05);
+}
+/* Burbuja flotante EVA más visible */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(to right, #169b62, #48c2a7);
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Icono más grande y claro */
+.floating-btn img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Tooltip al pasar el mouse */
+.floating-btn::after {
+  content: "Chat with EVA!";
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: #333;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.floating-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}

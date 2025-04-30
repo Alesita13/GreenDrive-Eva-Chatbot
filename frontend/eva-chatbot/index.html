@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVA - Electric Vehicle Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/eva-bot-logo.png" type="image/png" />
+</head>
+<body>
+  <header class="eva-chat-header">
+    <img src="assets/eva-bot-logo.png" alt="EVA Logo" class="logo" />
+    <div class="eva-chat-title">
+      <h1 class="title">EVA</h1>
+      <p class="subtitle">Drive smarter, charge faster, live greener.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="button-group">
+      <button id="battery-btn">🔋 Battery Life</button>
+      <button id="grants-btn">💎 EV Grants</button>
+      <button id="stations-btn">⚡ Charging Stations</button>
+      <button id="guides-btn">💻 EV Guides</button>
+    </div>
+
+    <!-- FAQ container -->
+    <div id="faq-container" style="display: none;" class="faq-section">
+      <h2>EV FAQs</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">1. What is an electric vehicle (EV)?</div>
+        <div class="faq-answer">An EV is a vehicle that runs fully or partially on electric power instead of gasoline.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">2. How long does it take to charge an EV?</div>
+        <div class="faq-answer">Charging time varies between 30 minutes to 8 hours depending on the charger type and battery size.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">3. How much does it cost to charge an EV?</div>
+        <div class="faq-answer">It usually costs between €5 and €15 depending on battery size and charging station.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">4. What are the common connector types?</div>
+        <div class="faq-answer">Common connectors include CCS, CHAdeMO, and Type 2 for AC charging.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">5. Can I charge my EV at home?</div>
+        <div class="faq-answer">Yes, using a standard outlet or a faster home charger.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">6. Are there government grants for EVs?</div>
+        <div class="faq-answer">Yes, in Ireland there are SEAI grants and tax incentives for EV purchases and home chargers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">7. How far can an EV travel on a full charge?</div>
+        <div class="faq-answer">It ranges from 150 km to over 500 km depending on the EV model.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">8. Can I use Google Maps for EV stations?</div>
+        <div class="faq-answer">Yes, Google Maps shows nearby charging stations with live availability for many networks.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">9. What is regenerative braking?</div>
+        <div class="faq-answer">It's a system that recovers energy when braking and sends it back to the battery.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">10. Do EVs require less maintenance?</div>
+        <div class="faq-answer">Yes. EVs have fewer moving parts and no oil changes, so they require less maintenance overall.</div>
+      </div>
+    </div>
+
+    <div id="chat-container">
+      <!-- Botón dentro del contenedor para cerrarlo -->
+      <div id="chat-box"></div>
+      <p id="typing-indicator" class="typing">EVA is typing...</p>
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="Ask me something..." />
+        <button id="send-btn">📩</button>
+        <button id="voice-btn" title="Speak">🎙️</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
