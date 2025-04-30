@@ -51,7 +51,7 @@ async function sendToBot(message) {
   const jsonResponse = JSON.stringify({ "message": message, "latitud": coords.lat, "longitud": coords.lng });
 
   try {
-    const res = await fetch("http://127.0.0.1:5050/chat", {
+    const res = await fetch("http://0.0.0.0:10000/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: jsonResponse,
